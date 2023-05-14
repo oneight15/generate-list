@@ -1,0 +1,40 @@
+body {
+  font-size: 32px;
+  padding-top: 200px;
+}
+
+.list {
+  list-style: none;
+  padding: 0 50px;
+  margin:  0 auto;
+  max-width: 800px;
+  min-height: 200px;
+  counter-reset: li;
+}
+
+.list__item {
+  position: relative;
+  display: block;
+  padding: 0.4em 2em;
+  margin-bottom: 15px;
+  background-color: #DAD2CA;
+  color: #444;
+  border-radius: 0.4em;
+}
+
+.list__item:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background-color: #8FD4C1;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  }
