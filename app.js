@@ -2,20 +2,19 @@
 
 const list = document.querySelector('.list');
 const lastItem = document.querySelector('.list:last-child');
+const allItems = document.querySelectorAll('.list__item');
 
-const generateItem = text => {
+const askStr = () => {
+  const str = prompt('type text');
+  return str;
+}
+
+const generateItem = () => {
   const elem = document.createElement('li');
   elem.classList.add('list__item');
-  elem.textContent = text;
+  elem.textContent = askStr();
   return elem;
 }
 
-const addItem = elem => {
-  list.append(generateItem(elem));
-}
 
-const foo = () => {
-  addItem(prompt('type text'));
-}
 
-foo()
